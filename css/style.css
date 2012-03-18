@@ -1,0 +1,315 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+h1 {
+  font: bold 3em/1.2em Helvetica, sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  margin-bottom: 0.25em;
+  text-shadow: 0 1px 3px #000;
+}
+
+.pressable, menu a {
+  background: #333;
+  color: #fff;
+  display: block;
+  font-size: 1.3em;
+  line-height: 3.5em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(100, 100, 100, 0.15))), #403f3f;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(100, 100, 100, 0.15) 100%), #403f3f;
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(100, 100, 100, 0.15) 100%), #403f3f;
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(100, 100, 100, 0.15) 100%), #403f3f;
+  background: -ms-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(100, 100, 100, 0.15) 100%), #403f3f;
+  background: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(100, 100, 100, 0.15) 100%), #403f3f;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0.3), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0.3), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0.3), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.pressable:active, menu a:active {
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0.3), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0.3), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 0 0 5px rgba(255, 255, 255, 0.3), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.calculator {
+  background: #aaa;
+  border: 1px solid #000;
+  font: normal 1em/1.5em Helvetica, sans-serif;
+  padding: 1em;
+  margin: 0.25em auto;
+  max-width: 500px;
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -ms-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  border-radius: 0.75em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(80px, rgba(255, 255, 255, 0.3)), color-stop(81px, rgba(255, 255, 255, 0.25)), color-stop(80%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0.15))), url("../images/noise.png");
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 80px, rgba(255, 255, 255, 0.25) 81px, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.15) 100%), url("../images/noise.png");
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 80px, rgba(255, 255, 255, 0.25) 81px, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.15) 100%), url("../images/noise.png");
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 80px, rgba(255, 255, 255, 0.25) 81px, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.15) 100%), url("../images/noise.png");
+  background: -ms-linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 80px, rgba(255, 255, 255, 0.25) 81px, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.15) 100%), url("../images/noise.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 80px, rgba(255, 255, 255, 0.25) 81px, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.15) 100%), url("../images/noise.png");
+  -webkit-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.85), inset 0 0 1px black;
+  -moz-box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.85), inset 0 0 1px black;
+  box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.85), inset 0 0 1px black;
+}
+.calculator header {
+  background: #000;
+  border: 2px solid #111;
+  padding: 0 0.75em 0.75em 0.65em;
+  position: relative;
+  text-align: right;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.4), inset 0 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.25)), color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(57%, rgba(255, 255, 255, 0.12)), color-stop(57%, rgba(255, 255, 255, 0)), color-stop(58%, rgba(255, 255, 255, 0.25)), color-stop(58%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0))), black;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.12) 57%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0.25) 58%, rgba(255, 255, 255, 0.1) 58%, rgba(255, 255, 255, 0) 100%), black;
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.12) 57%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0.25) 58%, rgba(255, 255, 255, 0.1) 58%, rgba(255, 255, 255, 0) 100%), black;
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.12) 57%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0.25) 58%, rgba(255, 255, 255, 0.1) 58%, rgba(255, 255, 255, 0) 100%), black;
+  background: -ms-linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.12) 57%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0.25) 58%, rgba(255, 255, 255, 0.1) 58%, rgba(255, 255, 255, 0) 100%), black;
+  background: linear-gradient(rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.12) 57%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0.25) 58%, rgba(255, 255, 255, 0.1) 58%, rgba(255, 255, 255, 0) 100%), black;
+}
+.calculator header:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, 310deg, 310deg, color-stop(30%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.03)), color-stop(50%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(310deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0) 50%);
+  background: -moz-linear-gradient(310deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0) 50%);
+  background: -o-linear-gradient(310deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0) 50%);
+  background: -ms-linear-gradient(310deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0) 50%);
+  background: linear-gradient(310deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.03) 50%, rgba(255, 255, 255, 0) 50%);
+}
+.calculator header h2 {
+  color: rgba(100, 220, 255, 0.8);
+  font-family: monospace;
+  text-shadow: 0 1px 2px rgba(100, 220, 255, 0.4);
+}
+.calculator header h2 b {
+  background: rgba(100, 220, 255, 0.5);
+  border: 1px solid rgba(100, 220, 255, 0.5);
+  padding: 0.15em 0.4em;
+  margin: 0.25em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 8px rgba(100, 220, 255, 0.9);
+  -moz-box-shadow: 0 1px 8px rgba(100, 220, 255, 0.9);
+  box-shadow: 0 1px 8px rgba(100, 220, 255, 0.9);
+}
+.calculator header ul li {
+  background: #555;
+  border: 1px solid #666;
+  padding: 0 0.5em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+.calculator header ul li {
+  *display: inline;
+}
+
+menu {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  margin-top: 1.25em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.25), 0 0 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  *zoom: 1;
+}
+menu ul {
+  display: block;
+  padding: 0.75em 0.75em 0;
+  margin: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+menu li {
+  float: left;
+  margin: 0 1.5% 1em;
+  position: relative;
+  width: 22%;
+}
+menu li.wide {
+  width: 46.5%;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 0 0 0.27em;
+  -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.utility a {
+  line-height: 2.5em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 240, 240, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.14))), black;
+  background: -webkit-linear-gradient(rgba(255, 240, 240, 0.25) 0%, rgba(255, 255, 255, 0.14) 100%), black;
+  background: -moz-linear-gradient(rgba(255, 240, 240, 0.25) 0%, rgba(255, 255, 255, 0.14) 100%), black;
+  background: -o-linear-gradient(rgba(255, 240, 240, 0.25) 0%, rgba(255, 255, 255, 0.14) 100%), black;
+  background: -ms-linear-gradient(rgba(255, 240, 240, 0.25) 0%, rgba(255, 255, 255, 0.14) 100%), black;
+  background: linear-gradient(rgba(255, 240, 240, 0.25) 0%, rgba(255, 255, 255, 0.14) 100%), black;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 0 0 5px rgba(180, 180, 180, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 0 0 5px rgba(180, 180, 180, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 0 0 5px rgba(180, 180, 180, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.utility a:active {
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 0 0 5px rgba(180, 180, 180, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 0 0 5px rgba(180, 180, 180, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.3), inset 0 0 0 5px rgba(180, 180, 180, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.operation {
+  border: 0;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(160, 220, 255, 0.36)), color-stop(100%, rgba(160, 220, 255, 0.18))), black;
+  background: -webkit-linear-gradient(rgba(160, 220, 255, 0.36) 0%, rgba(160, 220, 255, 0.18) 100%), black;
+  background: -moz-linear-gradient(rgba(160, 220, 255, 0.36) 0%, rgba(160, 220, 255, 0.18) 100%), black;
+  background: -o-linear-gradient(rgba(160, 220, 255, 0.36) 0%, rgba(160, 220, 255, 0.18) 100%), black;
+  background: -ms-linear-gradient(rgba(160, 220, 255, 0.36) 0%, rgba(160, 220, 255, 0.18) 100%), black;
+  background: linear-gradient(rgba(160, 220, 255, 0.36) 0%, rgba(160, 220, 255, 0.18) 100%), black;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 0 0 5px rgba(200, 220, 255, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 0 0 5px rgba(200, 220, 255, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 0 0 5px rgba(200, 220, 255, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.1);
+}
+.operation:active {
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 0 0 5px rgba(200, 220, 255, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 0 0 5px rgba(200, 220, 255, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 0 0 5px rgba(200, 220, 255, 0.15), inset 0 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.backspace {
+  clear: left;
+}
+.backspace a {
+  color: rgba(255, 215, 215, 0.8);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.4))), #7b0003;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #7b0003;
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #7b0003;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #7b0003;
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #7b0003;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #7b0003;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(225, 120, 40, 0.4), inset 0 0 0 5px rgba(215, 45, 10, 0.35), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(225, 120, 40, 0.4), inset 0 0 0 5px rgba(215, 45, 10, 0.35), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 1px rgba(225, 120, 40, 0.4), inset 0 0 0 5px rgba(215, 45, 10, 0.35), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.backspace a:active {
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(225, 120, 40, 0.4), inset 0 0 0 5px rgba(215, 45, 10, 0.35), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(225, 120, 40, 0.4), inset 0 0 0 5px rgba(215, 45, 10, 0.35), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 1px rgba(225, 120, 40, 0.4), inset 0 0 0 5px rgba(215, 45, 10, 0.35), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.long {
+  line-height: 8em;
+  position: absolute;
+  width: 100%;
+}
+
+.equals {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.4))), #a01e00;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #a01e00;
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #a01e00;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #a01e00;
+  background: -ms-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #a01e00;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #a01e00;
+  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 2px rgba(225, 185, 0, 0.5), inset 0 0 0 5px rgba(175, 45, 3, 0.8), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 2px rgba(225, 185, 0, 0.5), inset 0 0 0 5px rgba(175, 45, 3, 0.8), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), 0 0 2px rgba(255, 255, 255, 0.3), inset 0 1px 2px rgba(225, 185, 0, 0.5), inset 0 0 0 5px rgba(175, 45, 3, 0.8), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.equals:active {
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 2px rgba(225, 185, 0, 0.5), inset 0 0 0 5px rgba(175, 45, 3, 0.8), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 2px rgba(225, 185, 0, 0.5), inset 0 0 0 5px rgba(175, 45, 3, 0.8), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.95), inset 0 0 0 100px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 0, 0, 0.95), 0 0 1px 3px rgba(255, 255, 255, 0.15), inset 0 1px 2px rgba(225, 185, 0, 0.5), inset 0 0 0 5px rgba(175, 45, 3, 0.8), inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}

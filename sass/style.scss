@@ -1,0 +1,361 @@
+@import "compass/reset";
+@import "compass";
+
+$sans-serif: Helvetica, sans-serif;
+$button-width: 22%;
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+h1 {
+    font: bold 3em/1.2em $sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.2em;
+    margin-bottom: 0.25em;
+    text-shadow: 0 1px 3px #000;
+}
+
+.pressable {
+    background: #333;
+    color: #fff;
+    display: block;
+    font-size: 1.3em;
+    line-height: 3.5em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    @include border-radius(0.5em);
+
+    $stops: color-stops(
+        rgba(255,255,255,0.30) 0%,
+        rgba(100,100,100,0.15) 100%
+    );
+
+    @include background(linear-gradient($stops), #403f3f);
+    @include box-shadow(
+        
+        // The Outside Border
+        0 0 0 2px rgba(0,0,0,0.95),
+        0 0 1px 3px rgba(255,255,255,0.15),
+        
+        // The Internal border
+        0 0 2px rgba(255,255,255,0.3),
+        inset 0 1px 1px rgba(255,255,255,0.80),
+        inset 0 0 0 5px rgba(255,255,255,0.3),
+        inset 0 0 0 6px rgba(0,0,0,0.2)
+    );
+
+    &:active {
+
+        color: rgba(255,255,255,0.4);
+
+        @include box-shadow(
+            inset 0 1px 3px rgba(0,0,0,0.95),
+            inset 0 0 0 100px rgba(0,0,0,0.4),
+
+            0 0 0 2px rgba(0,0,0,0.95),
+            0 0 1px 3px rgba(255,255,255,0.15),
+            inset 0 1px 1px rgba(255,255,255,0.80),
+            inset 0 0 0 5px rgba(255,255,255,0.3),
+            inset 0 0 0 6px rgba(0,0,0,0.2)
+        );
+    }
+
+}
+
+.calculator {
+
+    background: #aaa;
+    border: 1px solid #000;
+    font: normal 1em/1.5em $sans-serif;
+    padding: 1em;
+    margin: 0.25em auto;
+    max-width: 500px;
+    @include border-radius(0.75em);
+    
+    $stops: color-stops(
+        rgba(255,255,255,0.3) 0,
+        rgba(255,255,255,0.3) 80px,
+        rgba(255,255,255,0.25) 81px,
+        rgba(255,255,255,0.2) 80%,
+        rgba(255,255,255,0.15) 100%
+    );
+
+    @include background(linear-gradient($stops), url("../images/noise.png"));
+    @include box-shadow(
+        inset 0 0 1px rgba(255,255,255,0.85),
+        inset 0 0 1px rgba(0,0,0,1)
+    );
+
+    header {
+
+        background: #000;
+        border: 2px solid #111;
+        padding: 0 0.75em 0.75em 0.65em;
+        position: relative;
+        text-align: right;
+
+        @include box-shadow(
+            0 1px 1px rgba(255,255,255,0.4), 
+            inset 0 0 1px rgba(255,255,255,0.4)
+        );
+
+        @include border-radius(0.5em); 
+
+        $stops: color-stops(
+            rgba(255,255,255,0.25) 0%,
+            rgba(255,255,255,0.15) 50%,
+            rgba(255,255,255,0.12) 57%,
+            rgba(255,255,255,0) 57%,
+            rgba(255,255,255,0.25) 58%,
+            rgba(255,255,255,0.1) 58%,
+            rgba(255,255,255,0) 100%
+        );
+
+        @include background(linear-gradient($stops), #000);
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            $stops: color-stops(
+                rgba(255,255,255,0) 30%,
+                rgba(255,255,255,0.03) 50%,
+                rgba(255,255,255,0) 50%
+            );
+
+            @include background(linear-gradient(310deg, $stops));
+        }
+        
+        h2 {
+            
+            color: rgba(100,220,255, 0.8);
+            font-family: monospace;
+            text-shadow: 0 1px 2px rgba(100,220,255, 0.4);
+            
+            b {
+                background: rgba(100,220,255, 0.5);
+                border: 1px solid rgba(100,220,255, 0.5);
+                padding: 0.15em 0.4em;
+                margin: 0.25em;
+                
+                @include border-radius(4px);
+                @include box-shadow(0 1px 8px rgba(100,220,255, 0.9));
+            }
+        }
+        ul li {
+            background: #555;
+            border: 1px solid #666;
+            padding: 0 0.5em;
+
+            @include border-radius(0.25em);
+            @include inline-block;
+        }
+    }
+
+    
+}
+
+menu {
+
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(0,0,0,0.35);
+    margin-top: 1.25em;
+
+    @include border-radius(0.5em); 
+    @include box-shadow(
+        inset 0 0 2px rgba(0,0,0,0.25), 
+        0 0 1px rgba(255,255,255,0.25),
+        0 1px 1px rgba(255,255,255,0.15)
+    );
+
+    @include clearfix();
+
+    ul {
+        display: block;
+        padding: 0.75em 0.75em 0;
+        margin: 0;
+        @include clearfix();
+    }
+
+    li {
+        float: left;
+        margin: 0 1.5% 1em;
+        position: relative;
+        width: $button-width;
+
+        &.wide {
+            width: $button-width * 2 + 2.5%;
+        }
+    }
+
+    a {
+        @extend .pressable;
+    }
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    margin: 0 0 0.27em;
+    @include box-shadow(0 1px 1px rgba(255,255,255,0.1));
+}
+
+.utility a {
+
+    line-height: 2.5em;
+
+    $stops: color-stops(
+        rgba(255,240,240,0.25) 0%,
+        rgba(255,255,255,0.14) 100%
+    );
+
+    @include background(linear-gradient($stops), #000);
+    @include box-shadow(
+        // The Outside Border
+        0 0 0 2px rgba(0,0,0,0.95),
+        0 0 1px 3px rgba(255,255,255,0.15),
+
+        // The internal border
+        0 0 2px rgba(255,255,255,0.3),
+        inset 0 1px 1px rgba(255,255,255,0.30),
+        inset 0 0 0 5px rgba(180,180,180,0.15),
+        inset 0 0 0 6px rgba(0,0,0,0.2)
+    );
+
+    &:active {
+        @include box-shadow(
+            inset 0 1px 3px rgba(0,0,0,0.95),
+            inset 0 0 0 100px rgba(0,0,0,0.4),
+            
+            0 0 2px rgba(255,255,255,0.3),
+            inset 0 1px 1px rgba(255,255,255,0.30),
+            inset 0 0 0 5px rgba(180,180,180,0.15),
+            inset 0 0 0 6px rgba(0,0,0,0.2)
+        );
+    }
+}
+
+.operation {
+
+    border: 0;
+
+    $stops: color-stops(
+        rgba(160,220,255,0.36) 0%,
+        rgba(160,220,255,0.18) 100%
+    );
+
+    @include background(linear-gradient($stops), #000);
+    @include box-shadow(
+        0 0 0 2px rgba(0,0,0,0.95),
+        0 0 1px 3px rgba(255,255,255,0.15),
+        
+        inset 0 1px 1px rgba(255,255,255,0.35),
+        inset 0 0 0 5px rgba(200,220,255,0.15),
+        inset 0 0 0 6px rgba(0,0,0,0.1)
+    );
+
+    &:active {
+        @include box-shadow(
+            inset 0 1px 3px rgba(0,0,0,0.95),
+            inset 0 0 0 100px rgba(0,0,0,0.4),
+            
+            0 0 0 2px rgba(0,0,0,0.95),
+            0 0 1px 3px rgba(255,255,255,0.15),
+            inset 0 1px 1px rgba(255,255,255,0.35),
+            inset 0 0 0 5px rgba(200,220,255,0.15),
+            inset 0 0 0 6px rgba(0,0,0,0.1)
+        );
+    }
+}
+
+.backspace {
+
+    clear: left;
+
+    a {
+        
+        color: rgba(255,215,215,0.8);
+
+        $stops: color-stops(
+            rgba(0,0,0, 0) 0%,
+            rgba(0,0,0, 0.4) 100%
+        );
+
+        @include background(linear-gradient($stops), #7B0003);
+        @include box-shadow(
+
+            // The Outside Border
+            0 0 0 2px rgba(0,0,0,0.95),
+            0 0 1px 3px rgba(255,255,255,0.15),
+
+            // The Internal Border
+            0 0 2px rgba(255,255,255,0.3),
+            inset 0 1px 1px rgba(225,120,40,0.4),
+            inset 0 0 0 5px rgba(215, 45, 10, 0.35),
+            inset 0 0 0 6px rgba(0,0,0,0.2)
+        );
+
+        &:active {
+            @include box-shadow(
+                inset 0 1px 3px rgba(0,0,0,0.95),
+                inset 0 0 0 100px rgba(0,0,0,0.4),
+                
+                0 0 0 2px rgba(0,0,0,0.95),
+                0 0 1px 3px rgba(255,255,255,0.15),
+                inset 0 1px 1px rgba(225,120,40,0.4),
+                inset 0 0 0 5px rgba(215, 45, 10, 0.35),
+                inset 0 0 0 6px rgba(0,0,0,0.2)
+            );
+        }
+    }
+}
+
+.long {
+    line-height: 8em;
+    position: absolute;
+    width: 100%;
+}
+
+
+.equals {
+
+    $stops: color-stops(
+        rgba(0,0,0, 0) 0%,
+        rgba(0,0,0, 0.4) 100%
+    );
+
+    @include background(linear-gradient($stops), rgb(160,30,0));
+    @include box-shadow(
+
+        // The Outside Border
+        0 0 0 2px rgba(0,0,0,0.95),
+        0 0 1px 3px rgba(255,255,255,0.15),
+
+        // The Internal Border
+        0 0 2px rgba(255,255,255,0.3),
+        inset 0 1px 2px rgba(225,185, 0, 0.5),
+        inset 0 0 0 5px rgba(175, 45, 3, 0.8),
+        inset 0 0 0 6px rgba(0,0,0,0.2)
+    );
+
+    &:active {
+        @include box-shadow(
+            inset 0 1px 3px rgba(0,0,0,0.95),
+            inset 0 0 0 100px rgba(0,0,0,0.4),
+            
+            0 0 0 2px rgba(0,0,0,0.95),
+            0 0 1px 3px rgba(255,255,255,0.15),
+            inset 0 1px 2px rgba(225,185, 0, 0.5),
+            inset 0 0 0 5px rgba(175, 45, 3, 0.8),
+            inset 0 0 0 6px rgba(0,0,0,0.2)
+        );
+    }
+}
